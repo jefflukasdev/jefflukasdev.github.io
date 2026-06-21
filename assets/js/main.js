@@ -5,12 +5,16 @@ function setActiveLink() {
   let currentSectionId = "";
 
   sections.forEach((section) => {
-    const sectionTop = section.offsetTop - 120;
+    const sectionTop = section.offsetTop - 140;
 
     if (window.scrollY >= sectionTop) {
       currentSectionId = section.getAttribute("id");
     }
   });
+
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 20) {
+    currentSectionId = "contact";
+  }
 
   navLinks.forEach((link) => {
     link.classList.remove("active");
@@ -23,3 +27,4 @@ function setActiveLink() {
 
 window.addEventListener("scroll", setActiveLink);
 window.addEventListener("load", setActiveLink);
+window.addEventListener("resize", setActiveLink);
