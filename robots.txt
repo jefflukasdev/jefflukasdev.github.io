@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jefflukasdev.github.io/sitemap.xml
