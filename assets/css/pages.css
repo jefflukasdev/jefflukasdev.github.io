@@ -184,15 +184,14 @@
 
 .case-study-layout {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 280px minmax(0, 1fr);
   gap: 64px;
-  padding-top: 32px;
+  align-items: start;
 }
 
 .case-study-sidebar {
   position: sticky;
-  top: 90px;
-  align-self: start;
+  top: 96px;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 18px;
