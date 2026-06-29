@@ -252,10 +252,13 @@
   max-width: var(--max-width);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: 56px;
   background: linear-gradient(135deg, #0f172a, #111827);
   color: white;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 32px;
+  padding: 48px;
 }
 
 .contact-card-expanded .eyebrow {
@@ -266,25 +269,48 @@
   color: #cbd5e1;
 }
 
+.contact-intro {
+  min-width: 0;
+}
+
+.contact-intro .contact-links {
+  margin-top: 32px;
+}
+
+.contact-intro .contact-links a {
+  color: white;
+}
+
 .contact-form {
+  width: 100%;
+  min-width: 0;
   display: grid;
   gap: 14px;
 }
 
 .contact-form label {
+  display: block;
   font-weight: 700;
   font-size: 0.9rem;
+  color: white;
 }
 
 .contact-form input,
 .contact-form textarea {
+  display: block;
   width: 100%;
-  border: 1px solid rgba(148, 163, 184, 0.35);
+  min-width: 0;
+  border: 1px solid rgba(148, 163, 184, 0.38);
   border-radius: 14px;
   padding: 14px 16px;
   background: rgba(255, 255, 255, 0.08);
   color: white;
   font: inherit;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(203, 213, 225, 0.72);
 }
 
 .contact-form input:focus,
@@ -295,15 +321,24 @@
 
 .contact-form textarea {
   resize: vertical;
+  min-height: 160px;
+}
+
+.contact-form button {
+  width: fit-content;
+  border: none;
+  cursor: pointer;
+  margin-top: 8px;
 }
 
 .honeypot {
-  display: none;
+  display: none !important;
 }
 
 @media (max-width: 900px) {
   .contact-card-expanded {
     grid-template-columns: 1fr;
+    padding: 32px;
   }
 }
 
