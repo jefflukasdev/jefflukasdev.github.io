@@ -41,6 +41,11 @@
 .button {
   padding: 13px 18px;
   border-radius: 999px;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
 }
 
 .primary {
@@ -61,16 +66,35 @@
 
 .card,
 .skill-card,
-.journal-card {
-  background: var(--surface);
-  border: 1px solid var(--line);
+.featured-card,
+.contact-card {
   border-radius: 18px;
-  padding: 28px;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
-.card p,
-.journal-card p {
+.card,
+.skill-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 28px;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.18);
+}
+
+.card:hover,
+.skill-card:hover,
+.featured-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(56, 189, 248, 0.45);
+}
+
+.card p {
   color: var(--muted);
+}
+
+.card h3,
+.skill-card h3,
+.featured-card h3 {
+  letter-spacing: -0.025em;
 }
 
 .card-label {
@@ -88,50 +112,11 @@
 }
 
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 4px;
-}
-
-.button,
-.card,
-.skill-card,
-.featured-card {
-  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
-}
-
-.button:hover,
-.card:hover,
-.skill-card:hover,
-.featured-card:hover {
-  transform: translateY(-2px);
-}
-
-.card:hover,
-.skill-card:hover,
-.featured-card:hover {
-  border-color: rgba(56, 189, 248, 0.45);
-}
-
-.card,
-.skill-card,
-.featured-card,
-.contact-card,
-.resume-cta {
-  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.18);
-}
-
-.card,
-.skill-card {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0)),
-    var(--surface);
-}
-
-.card h3,
-.skill-card h3,
-.featured-card h3 {
-  letter-spacing: -0.025em;
 }
 
 @media (max-width: 800px) {

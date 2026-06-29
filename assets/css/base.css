@@ -7,11 +7,12 @@
   --line: #2d3748;
   --accent: #38bdf8;
   --max-width: 1120px;
-  --light-bg: #eaf2f8;
-  --light-bg-soft: #f6f9fc;
+
+  --light-bg: #edf4f8;
+  --light-bg-soft: #f8fafc;
   --light-card: #ffffff;
   --light-text: #0f172a;
-  --light-muted: #475569;
+  --light-muted: #334155;
   --light-line: #cbd5e1;
 }
 
