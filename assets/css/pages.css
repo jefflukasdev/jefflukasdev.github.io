@@ -329,6 +329,31 @@
   border-top: 1px solid var(--line);
 }
 
+.case-study-content {
+  max-width: 800px;
+}
+
+.case-section {
+  margin-bottom: 64px;
+}
+
+.case-section h2 {
+  margin-bottom: 18px;
+}
+
+.case-section p {
+  line-height: 1.8;
+}
+
+.case-study-sidebar {
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+}
+
+.case-study-next .button.primary {
+  background: var(--accent);
+  color: #03111c;
+}
+
 @media (max-width: 1000px) {
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
