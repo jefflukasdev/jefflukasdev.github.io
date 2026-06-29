@@ -99,15 +99,13 @@
 .skills-section-light,
 .contact-section-light {
   max-width: none;
-  background:
-    radial-gradient(circle at top left, rgba(56, 189, 248, 0.10), transparent 32%),
-    linear-gradient(180deg, #eef6fb 0%, #f8fafc 100%);
+  background: #edf4f8;
   padding: 96px 24px;
 }
 
 .skills-section-light .eyebrow,
 .contact-section-light .eyebrow {
-  color: #0284c7;
+  color: #0369a1;
 }
 
 .skills-section-light h2 {
@@ -115,9 +113,22 @@
 }
 
 .skills-section-light .skill-card {
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid #cbd5e1;
-  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+  background: #ffffff;
+  border: 1px solid #b8c7d6;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
+}
+
+.skills-section-light .skill-card h3 {
+  color: #0f172a !important;
+}
+
+.skills-section-light .skill-card li {
+  color: #334155 !important;
+}
+
+.skills-section-light .skill-card:hover {
+  border-color: #38bdf8;
+  transform: translateY(-4px);
 }
 
 .journey {
