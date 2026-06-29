@@ -367,6 +367,31 @@
   background: rgba(56, 189, 248, 0.06);
 }
 
+.case-image {
+  display: block;
+  width: 100%;
+  margin: 36px 0 60px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.case-image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.case-image-grid .case-image {
+  margin: 36px 0 60px;
+}
+
+@media (max-width: 800px) {
+  .case-image-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 1000px) {
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
