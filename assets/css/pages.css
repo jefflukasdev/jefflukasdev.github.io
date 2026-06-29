@@ -354,6 +354,19 @@
   color: #03111c;
 }
 
+.case-study-hero {
+  padding-bottom: 56px;
+  border-bottom: 1px solid var(--line);
+}
+
+.case-study-hero .project-meta {
+  margin-top: 36px;
+}
+
+.case-study-hero .project-meta span {
+  background: rgba(56, 189, 248, 0.06);
+}
+
 @media (max-width: 1000px) {
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
