@@ -312,6 +312,23 @@
   margin-bottom: 10px;
 }
 
+.case-section {
+  margin-bottom: 56px;
+}
+
+.case-section .case-label {
+  margin-bottom: 10px;
+}
+
+.case-study-next {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 64px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+
 @media (max-width: 1000px) {
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
