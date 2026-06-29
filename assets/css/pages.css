@@ -335,6 +335,37 @@
   display: none !important;
 }
 
+/* ==========================
+   Light Sections
+========================== */
+
+.section-light{
+    background:#f8fafc;
+    color:#0f172a;
+}
+
+.section-light .eyebrow{
+    color:var(--accent);
+}
+
+.section-light h2{
+    color:#111827;
+}
+
+.section-light .skill-card{
+    background:white;
+    border:1px solid #e2e8f0;
+    box-shadow:0 8px 30px rgba(15,23,42,.06);
+}
+
+.section-light .skill-card h3{
+    color:#111827;
+}
+
+.section-light .skill-card li{
+    color:#475569;
+}
+
 @media (max-width: 900px) {
   .contact-card-expanded {
     grid-template-columns: 1fr;
