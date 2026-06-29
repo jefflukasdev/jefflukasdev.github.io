@@ -96,36 +96,28 @@
   margin-bottom: 8px;
 }
 
-.skills-section-light {
+.skills-section-light,
+.contact-section-light {
   max-width: none;
-  background: #f8fafc;
+  background:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.10), transparent 32%),
+    linear-gradient(180deg, #eef6fb 0%, #f8fafc 100%);
   padding: 96px 24px;
 }
 
-.skills-inner {
-  padding: 0;
-}
-
-.skills-section-light .eyebrow {
-  color: var(--accent);
+.skills-section-light .eyebrow,
+.contact-section-light .eyebrow {
+  color: #0284c7;
 }
 
 .skills-section-light h2 {
-  color: #111827;
+  color: #0f172a;
 }
 
 .skills-section-light .skill-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 18px 60px rgba(15, 23, 42, 0.08);
-}
-
-.skills-section-light .skill-card h3 {
-  color: #111827;
-}
-
-.skills-section-light .skill-card li {
-  color: #475569;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
 }
 
 .journey {
@@ -221,12 +213,6 @@
 
 .case-study-content li {
   margin-bottom: 10px;
-}
-
-.contact-section-light {
-  max-width: none;
-  background: #f8fafc;
-  padding: 96px 24px;
 }
 
 .contact-card-expanded {

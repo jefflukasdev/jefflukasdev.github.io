@@ -32,66 +32,71 @@
 /* ==========================
    Footer
 ========================== */
-.site-footer{
-    background:#0b1220;
-    border-top:1px solid var(--line);
-    margin-top:120px;
+.site-footer {
+  background: #0b1220;
+  border-top: 1px solid var(--line);
 }
 
-.footer-content{
-    max-width:1200px;
-    margin:auto;
-    padding:72px 24px;
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    gap:80px;
+.footer-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 28px 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
 }
 
-.footer-brand{
-    max-width:460px;
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
 }
 
-.footer-brand h3{
-    font-size:2rem;
-    margin-bottom:16px;
+.footer-brand h3 {
+  font-size: 1rem;
+  margin: 0;
+  white-space: nowrap;
 }
 
-.footer-brand p{
-    color:var(--muted);
-    line-height:1.8;
+.footer-brand p {
+  color: var(--muted);
+  margin: 0;
+  font-size: 0.95rem;
 }
 
-.footer-nav{
-    display:grid;
-    gap:14px;
+.footer-nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
 }
 
-.footer-nav a{
-    color:var(--text);
-    text-decoration:none;
+.footer-nav a {
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
-.footer-nav a:hover{
-    color:var(--accent);
+.footer-nav a:hover {
+  color: var(--accent);
 }
 
-.footer-bottom{
-    border-top:1px solid var(--line);
-    text-align:center;
-    padding:24px;
-    color:var(--muted);
+.footer-bottom {
+  display: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .footer-content {
+    align-items: flex-start;
     flex-direction: column;
-    gap: 40px;
   }
 
-  .footer-nav {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    width: 100%;
+  .footer-brand {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
   }
 }
 
