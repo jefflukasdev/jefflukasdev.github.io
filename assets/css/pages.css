@@ -138,6 +138,15 @@
   padding: 96px 24px;
 }
 
+.contact-intro h2 {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  margin: 14px 0 28px;
+  color: #fff;
+  max-width: 520px;
+}
+
 .contact-card-expanded {
   max-width: var(--max-width);
   margin: 0 auto;
