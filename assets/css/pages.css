@@ -39,7 +39,7 @@
 }
 
 .section-band-light h2 {
-  color: #0f172a;
+  color: var(--light-text);
 }
 
 .section-band-light .skill-card {
