@@ -96,39 +96,27 @@
   margin-bottom: 8px;
 }
 
-.skills-section-light,
-.contact-section-light {
+.section-band {
   max-width: none;
-  background: #edf4f8;
-  padding: 96px 24px;
 }
 
-.skills-section-light .eyebrow,
-.contact-section-light .eyebrow {
+.section-band-light {
+  background:
+    linear-gradient(135deg, rgba(56, 189, 248, 0.08), transparent 34%),
+    linear-gradient(180deg, var(--light-bg) 0%, var(--light-bg-soft) 100%);
+}
+
+.section-band-inner {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.section-band-light .eyebrow {
   color: #0369a1;
 }
 
-.skills-section-light h2 {
-  color: #0f172a;
-}
-
-.skills-section-light .skill-card {
-  background: #ffffff;
-  border: 1px solid #b8c7d6;
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
-}
-
-.skills-section-light .skill-card h3 {
-  color: #0f172a !important;
-}
-
-.skills-section-light .skill-card li {
-  color: #334155 !important;
-}
-
-.skills-section-light .skill-card:hover {
-  border-color: #38bdf8;
-  transform: translateY(-4px);
+.section-band-light h2 {
+  color: var(--light-text);
 }
 
 .journey {
@@ -226,6 +214,10 @@
   margin-bottom: 10px;
 }
 
+.contact-section {
+  padding: 96px 24px;
+}
+
 .contact-card-expanded {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -237,6 +229,7 @@
   border: 1px solid rgba(148, 163, 184, 0.28);
   border-radius: 32px;
   padding: 48px;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.22);
 }
 
 .contact-card-expanded .eyebrow {
