@@ -38,7 +38,7 @@
   color: #0369a1;
 }
 
-.section-band-light h2 {
+#skills h2 {
   color: var(--light-text);
 }
 
@@ -145,6 +145,15 @@
   margin: 14px 0 28px;
   color: #fff;
   max-width: 520px;
+}
+
+.contact-card-expanded .contact-intro h2 {
+  color: #ffffff;
+  max-width: 520px;
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  margin: 14px 0 28px;
 }
 
 .contact-card-expanded {
