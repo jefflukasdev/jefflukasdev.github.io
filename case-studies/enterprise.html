@@ -81,38 +81,47 @@
 
         <section class="case-section">
           <p class="case-label">Role</p>
+
           <h2>My contribution</h2>
+
           <p>
-            I redesigned major areas of the application interface and helped extend the software into
-            a more connected, boundary-aware platform. My work included UI modernization, multi-pane
-            dashboard layouts, SQL-backed data views, user workflows, audit logging, assessment tools,
-            and visual reporting.
+              I joined an established enterprise compliance application built with Flask
+              and MySQL. The application's core compliance workflows, authentication,
+              and boundary-aware architecture were already in place. My role focused on
+              modernizing the user experience, redesigning major areas of the interface,
+              implementing new workflows, extending the existing database where needed,
+              and developing new application modules that integrated with the platform's
+              existing architecture.
           </p>
         </section>
 
         <section class="case-section">
-          <p class="case-label">Core Improvement</p>
-          <h2>Boundary-first automation</h2>
-          <p>
-            A major improvement was creating a boundary-first experience. When the active organization
-            or boundary changed in the sidebar, the application data updated throughout the dashboard
-            and related pages. This helped users work from the selected boundary context instead of
-            navigating through disconnected screens.
-          </p>
+          <p class="case-label">Workflow</p>
+          <h2>Navigation and Organization Switching</h2>
 
-          <img
-            src="../assets/images/case-studies/enterprise/boundary-dashboard.png"
-            alt="Boundary-first enterprise dashboard"
-            class="case-image">
+          <p>
+          One of the major usability improvements I developed was a persistent sidebar
+          navigation system with an integrated organization switcher. Users could change
+          the active organization from anywhere in the application, and the interface
+          immediately refreshed to display the appropriate organization-specific data
+          throughout dashboards and related pages using the application's existing
+          boundary-aware architecture.
+          </p>
+          <img src="../assets/images/case-studies/enterprise/boundary-dashboard.png"
+          class="case-image"
+          alt="Enterprise sidebar navigation and organization switching">
+
         </section>
 
         <section class="case-section">
           <p class="case-label">Dashboard</p>
           <h2>Dashboard modernization</h2>
           <p>
-            I extended the dashboard from simple outlined panels into a multi-pane interface with
-            contextual totals, compliance attributes, donut charts, status indicators, and boundary-aware
-            data. The goal was to make complex compliance information easier to scan and understand.
+            I redesigned the application's dashboard to better support enterprise
+            workflows by introducing multi-pane layouts, contextual summaries,
+            visual reporting, applied data visualization through graphics and charts and improved information hierarchy. The redesigned
+            dashboard made it easier for users to understand compliance status
+            without changing the application's existing business logic.
           </p>
 
           <img
@@ -125,9 +134,10 @@
           <p class="case-label">New Feature</p>
           <h2>Organization Directory</h2>
           <p>
-            I turned an unused placeholder area into an Organization Directory that displays personnel
-            and role information. This gave users a clearer way to understand who was connected to the
-            active organization and improved the usefulness of the organization page.
+            I designed and developed a new Organization Directory module that did
+            not previously exist. The feature provided a centralized view of
+            organizational personnel and role information while integrating with
+            the application's existing organization workflows. This would change based on active organization.
           </p>
 
           <img
@@ -137,13 +147,13 @@
         </section>
 
         <section class="case-section">
-          <p class="case-label">Workflow Redesign</p>
+          <!--<p class="case-label">Workflow Redesign</p>
           <h2>Risk management redesign</h2>
           <p>
             I redesigned the risk workflow into a more organized interface with separate areas for risk
             details, requirement mapping, authorization, approval, and renewal. This made the page easier
             to understand and helped guide users through a more complex workflow.
-          </p>
+          </p>-->
 
           <img
             src="../assets/images/case-studies/enterprise/risk_page.png"
@@ -152,13 +162,13 @@
         </section>
 
         <section class="case-section">
-          <p class="case-label">New Module</p>
+          <!--<p class="case-label">New Module</p>
           <h2>Activity Management</h2>
           <p>
             I created an Activity Management page that did not previously exist. The module allowed users
             to manage recurring activities, view schedule frequencies, track completion status, and update
             activity records from a centralized interface.
-          </p>
+          </p>-->
 
           <img
             src="../assets/images/case-studies/enterprise/activity_page.png"
@@ -170,10 +180,13 @@
           <p class="case-label">Security Functionality</p>
           <h2>Assessment and audit functionality</h2>
           <p>
-            I also built features that supported security and compliance workflows. The assessment tool
-            gave organizations a way to evaluate themselves against a NIST 800-style process, while the
-            audit logging feature tracked important system activity including logons, creates, edits,
-            deletes, and logoffs.
+            I designed and developed an Assessment module that allowed organizations
+            to perform structured NIST 800-style evaluations directly within the
+            application, reducing reliance on multiple external documents while
+            supporting a more consistent assessment workflow and giving the user a live-view of the state of their security. I also designed and developed an Audit module that recorded key system
+activity including logins, logouts, creates, edits, and deletes,
+providing organizations with greater visibility into user activity and
+supporting compliance auditing.
           </p>
 
           <div class="case-image-grid">
@@ -193,9 +206,9 @@
           <p class="case-label">Technical Highlights</p>
           <h2>Technical environment</h2>
           <ul>
-            <li>HTML, CSS, JavaScript, and Bootstrap for front-end development.</li>
-            <li>Python and Flask for application structure and back-end workflows.</li>
-            <li>SQL-backed data views and boundary-aware application data.</li>
+            <li>HTML, CSS, JavaScript, and Bootstrap for frontend.</li>
+            <li>Python and Flask for application structure and back-end workflow.</li>
+            <li>MySQL for database and backend support of new features.</li>
             <li>Dynamic dashboards using contextual metrics, charts, and status indicators.</li>
             <li>Authentication-related workflows, audit logging, and security-focused features.</li>
           </ul>
