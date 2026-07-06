@@ -1,3 +1,6 @@
+/* ==========================
+   pages.css
+========================== */
 .hero-text,
 .contact p {
   max-width: 760px;
@@ -121,7 +124,9 @@
 }
 
 .secondary-projects {
-  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
 }
 
 .journey {
@@ -382,7 +387,13 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1050px) {
+  .secondary-projects {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
   .secondary-projects {
     grid-template-columns: 1fr;
   }
