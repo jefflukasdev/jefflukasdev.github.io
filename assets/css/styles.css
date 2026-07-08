@@ -6,6 +6,11 @@
 @import url("components.css");
 @import url("pages.css");
 
+.experience-section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
 .experience-layout {
   display: grid;
   grid-template-columns: 280px minmax(0, 1fr);
@@ -14,8 +19,6 @@
 }
 
 .skills-sidebar {
-  position: sticky;
-  top: 110px;
   display: grid;
   gap: 14px;
 }
@@ -35,19 +38,42 @@
 .skill-panel p {
   color: var(--muted);
   font-size: 0.92rem;
+  line-height: 1.55;
   margin: 0;
 }
 
 .work-showcase {
   min-width: 0;
+  display: grid;
+  gap: 24px;
 }
 
-@media (max-width: 900px) {
+.work-showcase .featured-card {
+  margin-bottom: 0;
+}
+
+.secondary-projects {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.secondary-projects .card {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.secondary-projects .card a {
+  margin-top: auto;
+}
+
+@media (max-width: 1000px) {
   .experience-layout {
     grid-template-columns: 1fr;
   }
 
-  .skills-sidebar {
-    position: static;
+  .secondary-projects {
+    grid-template-columns: 1fr;
   }
 }

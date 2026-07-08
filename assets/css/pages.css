@@ -41,52 +41,6 @@
   color: #0369a1;
 }
 
-#skills h2 {
-  color: var(--light-text);
-}
-
-.section-band-light .skill-card {
-  background: var(--light-card);
-  border: 1px solid var(--light-line);
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
-}
-
-.section-band-light .skill-card h3 {
-  color: var(--light-text);
-}
-
-.section-band-light .skill-card li {
-  color: var(--light-muted);
-}
-
-.section-band-light .skill-card:hover {
-  border-color: var(--accent);
-  transform: translateY(-4px);
-}
-
-.skills-grid {
-  display: grid;
-  gap: 16px;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.skill-card h3 {
-  font-size: 1rem;
-  margin-bottom: 16px;
-}
-
-.skill-card ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.skill-card li {
-  color: var(--muted);
-  font-size: 0.95rem;
-  margin-bottom: 8px;
-}
-
 .featured-card {
   background: linear-gradient(135deg, var(--surface), var(--surface-light));
   border: 1px solid var(--line);
@@ -366,12 +320,6 @@
   }
 }
 
-@media (max-width: 1000px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 @media (max-width: 900px) {
   .contact-card-expanded,
   .case-study-layout {
@@ -400,11 +348,5 @@
 
   .featured-card {
     padding: 28px;
-  }
-}
-
-@media (max-width: 600px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
   }
 }
