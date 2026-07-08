@@ -2,9 +2,14 @@
    components.css
 ========================== */
 .logo {
-  font-size: 0.95rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    display: block;
+    height: 42px;
+    width: auto;
 }
 
 .nav {
