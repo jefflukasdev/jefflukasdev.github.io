@@ -27,13 +27,15 @@
 <body>
   <header class="header-shell">
     <div class="site-header">
-      <a class="logo" href="index.html">Jeff Lukas</a>
+      <a class="logo" href="#">
+          Jeff Lukas
+      </a>
+
       <nav class="nav">
-        <a href="#skills">Skills</a>
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="resume/Jeff-Lukas_resume.pdf" download>Resume</a>
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="resume/Jeff-Lukas_resume.pdf" download>Resume</a>
       </nav>
     </div>
   </header>
@@ -92,116 +94,94 @@
       </div>
     </section>
 
-    <section id="skills" class="section-band section-band-light">
-      <div class="section section-band-inner">
-        <div class="section-heading">
-          <p class="eyebrow">Skills</p>
-          <h2>Tools, practices, and technologies I use to build software.</h2>
-        </div>
-
-        <div class="skills-grid">
-          <article class="skill-card">
-            <h3>Languages</h3>
-            <ul>
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>JavaScript</li>
-              <li>Python</li>
-              <li>SQL</li>
-              <li>PHP</li>
-            </ul>
-          </article>
-
-          <article class="skill-card">
-            <h3>Frameworks & Libraries</h3>
-            <ul>
-              <li>Flask</li>
-              <li>Bootstrap</li>
-              <li>REST APIs</li>
-            </ul>
-          </article>
-
-          <article class="skill-card">
-            <h3>Developer Tools</h3>
-            <ul>
-              <li>VS Code</li>
-              <li>Git</li>
-              <li>Chrome DevTools</li>
-              <li>PyCharm</li>
-              <li>AI Tools</li>
-              <li>Figma & Adobe CC</li>
-            </ul>
-          </article>
-
-          <article class="skill-card">
-            <h3>Secure Development</h3>
-            <ul>
-              <li>Authentication</li>
-              <li>Authorization</li>
-              <li>Secure Coding</li>
-              <li>Application Security Fundamentals</li>
-            </ul>
-          </article>
-        </div>
-      </div>  
-    </section>
-
-    <section id="work" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Work</p>
-        <h2>Current Work</h2>
+    <section id="work" class="section experience-section">
+      <div class="section-heading experience-heading">
+        <p class="eyebrow">Selected Work</p>
+        <h2>Practical web application work backed by front-end, back-end, database, and security-minded development.</h2>
       </div>
 
-      <article class="featured-card">
-        <p class="card-label">Enterprise Software Development</p>
-        <h3>Enterprise Application Modernization</h3>
-        <p>
-          Redesigned and improved a complex enterprise application across UI/UX,
-          front-end implementation, modified back-end workflows, SQL database updates,
-          authentication, and overall usability.
-        </p>
+      <div class="experience-layout">
+        <aside class="skills-sidebar" aria-label="Technical skills">
+          <article class="skill-panel">
+            <h3>Languages</h3>
+            <p>HTML5, CSS3, JavaScript, Python, SQL, PHP</p>
+          </article>
 
-        <div class="project-meta">
-          <span>UI/UX</span>
-          <span>Front End</span>
-          <span>Back End</span>
-          <span>SQL</span>
-          <span>Authentication</span>
+          <article class="skill-panel">
+            <h3>Frameworks</h3>
+            <p>Flask, Bootstrap, REST APIs</p>
+          </article>
+
+          <article class="skill-panel">
+            <h3>Developer Tools</h3>
+            <p>Git, GitHub, VS Code, Chrome DevTools, MySQL Workbench, Figma</p>
+          </article>
+
+          <article class="skill-panel">
+            <h3>Secure Development</h3>
+            <p>Authentication, authorization, secure coding, application security fundamentals</p>
+          </article>
+
+          <article class="skill-panel">
+            <h3>Current Focus</h3>
+            <p>Junior web development, front-end development, web application development, and AppSec growth.</p>
+          </article>
+        </aside>
+
+        <div class="work-showcase">
+          <article class="featured-card">
+            <p class="card-label">Flagship Case Study</p>
+            <h3>Enterprise Application Modernization</h3>
+            <p>
+              Redesigned and improved a complex enterprise application across UI/UX,
+              front-end implementation, modified back-end workflows, SQL database updates,
+              authentication, organization switching, assessment pages, audit pages, and document import automation.
+            </p>
+
+            <div class="project-meta">
+              <span>UI/UX</span>
+              <span>Front End</span>
+              <span>Flask</span>
+              <span>SQL</span>
+              <span>Authentication</span>
+              <span>Workflow Automation</span>
+            </div>
+
+            <a href="case-studies/enterprise.html">Read flagship case study →</a>
+          </article>
+
+          <div class="card-grid secondary-projects">
+            <article class="card">
+              <p class="card-label">Automation / Secure Workflows</p>
+              <h3>Secure Document Automation</h3>
+              <p>
+                Built deterministic document import workflows that automated boundary and assessment setup
+                while preserving validation, predictability, and user trust.
+              </p>
+              <a href="case-studies/import-automation.html">Read case study →</a>
+            </article>
+
+            <article class="card">
+              <p class="card-label">Client Portal</p>
+              <h3>Client Portal and Authentication System</h3>
+              <p>
+                Developed client-facing portal functionality and contributed to user login architecture,
+                user data storage, and database-backed workflows.
+              </p>
+              <a href="case-studies/client-portal.html">Read case study →</a>
+            </article>
+
+            <article class="card">
+              <p class="card-label">Web Development</p>
+              <h3>Company Website Development</h3>
+              <p>
+                Built/Established company website to who we are, service offered,
+                our product, and support business development.
+              </p>
+              <a href="case-studies/ripcord-website.html">Read case study →</a>
+            </article>
+          </div>
         </div>
-
-        <a href="case-studies/enterprise.html">Read flagship case study →</a>
-      </article>
-
-      <div class="card-grid secondary-projects">
-        <article class="card">
-          <p class="card-label">Web Development</p>
-          <h3>Company Website Development</h3>
-          <p>
-            Built a professional company website designed to explain services,
-            establish credibility, and support business development.
-          </p>
-          <a href="case-studies/ripcord-website.html">Read case study →</a>
-        </article>
-
-        <article class="card">
-          <p class="card-label">Client Portal</p>
-          <h3>Client Portal and Authentication System</h3>
-          <p>
-            Developed client-facing portal functionality and contributed to user
-            login architecture, user data storage, and database-backed workflows.
-          </p>
-          <a href="case-studies/client-portal.html">Read case study →</a>
-        </article>
-
-        <article class="card">
-          <p class="card-label">Automation / Secure Workflows</p>
-          <h3>Secure Document Automation & Boundary Provisioning</h3>
-          <p>
-            Built deterministic document import workflows that automated boundary and assessment setup
-            while preserving validation, predictability, and user trust.
-          </p>
-          <a href="case-studies/import-automation.html">Read case study →</a>
-        </article>
       </div>
     </section>
 
@@ -302,14 +282,12 @@
   <footer class="site-footer">
     <div class="footer-content">
       <a class="footer-logo" href="index.html">Jeff Lukas</a>
-
-      <nav class="footer-nav">
-        <a href="#skills">Skills</a>
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="resume/Jeff-Lukas_resume.pdf" download>Resume</a>
-      </nav>
+      <p class="copyright">
+            © 2026 Jeff Lukas. All rights reserved.
+        </p>
+        <a class="back-to-top" href="#">
+            Back to Top ↑
+        </a>
     </div>
   </footer>
 
