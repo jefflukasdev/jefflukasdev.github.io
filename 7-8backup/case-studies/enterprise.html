@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Enterprise Application Modernization | Jeff Lukas</title>
+  <meta name="description"
+    content="Case study for enterprise application modernization, including UI modernization, Flask workflows, SQL updates, authentication, and secure development practices." />
+
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+
+<body>
+  <header class="header-shell">
+    <div class="site-header">
+      <a class="logo" href="../index.html">Jeff Lukas</a>
+
+      <nav class="nav">
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="../resume/Jeff-Lukas_resume.pdf" download>Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero case-study-hero">
+      <p class="eyebrow">Case Study</p>
+      <h1>Enterprise Application Modernization</h1>
+
+      <p class="hero-text">
+        Modernizing a complex enterprise web application through improved usability,
+        clearer workflows, stronger interface structure, SQL-backed functionality,
+        and security-minded development practices.
+      </p>
+
+      <div class="project-meta">
+        <span>Enterprise UI</span>
+        <span>Flask</span>
+        <span>SQL</span>
+        <span>Authentication</span>
+        <span>Client Workflows</span>
+      </div>
+    </section>
+
+    <section class="section case-study-layout">
+      <aside class="case-study-sidebar">
+        <h2>Overview</h2>
+
+        <div>
+          <p class="case-label">Role</p>
+          <p>Software Developer / UI/UX Developer</p>
+        </div>
+
+        <div>
+          <p class="case-label">Focus</p>
+          <p>UI modernization, usability, Flask workflows, SQL updates, authentication, and client portal functionality.</p>
+        </div>
+
+        <div>
+          <p class="case-label">Status</p>
+          <p>Sanitized professional case study.</p>
+        </div>
+      </aside>
+
+      <article class="case-study-content">
+        <section class="case-section">
+          <p class="case-label">Problem</p>
+          <h2>The challenge</h2>
+          <p>
+            The application supported complex enterprise compliance workflows, but the user experience
+            needed modernization. The interface relied heavily on static pages and simple containers,
+            making it harder for users to understand status, navigate between modules, and act on the
+            data connected to a selected organization or boundary.
+          </p>
+        </section>
+
+        <section class="case-section">
+          <p class="case-label">Role</p>
+
+          <h2>My contribution</h2>
+
+          <p>
+              I joined an established enterprise compliance application built with Flask
+              and MySQL. The application's core compliance workflows, authentication,
+              and boundary-aware architecture were already in place. My role focused on
+              modernizing the user experience, redesigning major areas of the interface,
+              implementing new workflows, extending the existing database where needed,
+              and developing new application modules that integrated with the platform's
+              existing architecture.
+          </p>
+        </section>
+
+        <section class="case-section">
+          <p class="case-label">Workflow</p>
+          <h2>Navigation and Organization Switching</h2>
+
+          <p>
+          One of the major usability improvements I developed was a persistent sidebar
+          navigation system with an integrated organization switcher. Users could change
+          the active organization from anywhere in the application, and the interface
+          immediately refreshed to display the appropriate organization-specific data
+          throughout dashboards and related pages using the application's existing
+          boundary-aware architecture.
+          </p>
+          <img src="../assets/images/case-studies/enterprise/boundary-dashboard.png"
+          class="case-image"
+          alt="Enterprise sidebar navigation and organization switching">
+
+        </section>
+
+        <section class="case-section">
+          <p class="case-label">Dashboard</p>
+          <h2>Dashboard modernization</h2>
+          <p>
+            I redesigned the application's dashboard to better support enterprise
+            workflows by introducing multi-pane layouts, contextual summaries,
+            visual reporting, applied data visualization through graphics and charts and improved information hierarchy. The redesigned
+            dashboard made it easier for users to understand compliance status
+            without changing the application's existing business logic.
+          </p>
+
+          <img
+            src="../assets/images/case-studies/enterprise/dashboard-detail.png"
+            alt="Enterprise dashboard detail view"
+            class="case-image">
+        </section>
+
+        <section class="case-section">
+          <p class="case-label">New Feature</p>
+          <h2>Organization Directory</h2>
+          <p>
+            I designed and developed a new Organization Directory module that did
+            not previously exist. The feature provided a centralized view of
+            organizational personnel and role information while integrating with
+            the application's existing organization workflows. This would change based on active organization.
+          </p>
+
+          <img
+            src="../assets/images/case-studies/enterprise/org_directory.png"
+            alt="Organization Directory interface"
+            class="case-image">
+        </section>
+
+        <section class="case-section">
+          <!--<p class="case-label">Workflow Redesign</p>
+          <h2>Risk management redesign</h2>
+          <p>
+            I redesigned the risk workflow into a more organized interface with separate areas for risk
+            details, requirement mapping, authorization, approval, and renewal. This made the page easier
+            to understand and helped guide users through a more complex workflow.
+          </p>-->
+
+          <img
+            src="../assets/images/case-studies/enterprise/risk_page.png"
+            alt="Risk management interface"
+            class="case-image">
+        </section>
+
+        <section class="case-section">
+          <!--<p class="case-label">New Module</p>
+          <h2>Activity Management</h2>
+          <p>
+            I created an Activity Management page that did not previously exist. The module allowed users
+            to manage recurring activities, view schedule frequencies, track completion status, and update
+            activity records from a centralized interface.
+          </p>-->
+
+          <img
+            src="../assets/images/case-studies/enterprise/activity_page.png"
+            alt="Activity Management interface"
+            class="case-image">
+        </section>
+
+        <section class="case-section">
+          <p class="case-label">Security Functionality</p>
+          <h2>Assessment and audit functionality</h2>
+          <p>
+            I designed and developed an Assessment module that allowed organizations
+            to perform structured NIST 800-style evaluations directly within the
+            application, reducing reliance on multiple external documents while
+            supporting a more consistent assessment workflow and giving the user a live-view of the state of their security. I also designed and developed an Audit module that recorded key system
+activity including logins, logouts, creates, edits, and deletes,
+providing organizations with greater visibility into user activity and
+supporting compliance auditing.
+          </p>
+
+          <div class="case-image-grid">
+            <img
+              src="../assets/images/case-studies/enterprise/assessment.png"
+              alt="Assessment functionality"
+              class="case-image">
+
+            <img
+              src="../assets/images/case-studies/enterprise/audit_logs.png"
+              alt="Audit logging functionality"
+              class="case-image">
+          </div>
+        </section>
+
+        <section class="case-section">
+          <p class="case-label">Technical Highlights</p>
+          <h2>Technical environment</h2>
+          <ul>
+            <li>HTML, CSS, JavaScript, and Bootstrap for frontend.</li>
+            <li>Python and Flask for application structure and back-end workflow.</li>
+            <li>MySQL for database and backend support of new features.</li>
+            <li>Dynamic dashboards using contextual metrics, charts, and status indicators.</li>
+            <li>Authentication-related workflows, audit logging, and security-focused features.</li>
+          </ul>
+        </section>
+
+        <section class="case-section">
+          <p class="case-label">Result</p>
+          <h2>Impact</h2>
+          <p>
+            The application evolved from a set of simpler pages into a more connected enterprise platform
+            with improved navigation, visual reporting, workflow organization, auditability, and contextual
+            data presentation. The modernization made complex compliance workflows easier to understand and
+            gave the product a stronger foundation for continued development.
+          </p>
+        </section>
+
+        <section class="case-section">
+          <p class="case-label">Reflection</p>
+          <h2>What I learned</h2>
+          <p>
+            This project strengthened my ability to think across the full software experience: user
+            interface design, application structure, database behavior, authentication, compliance workflows,
+            auditability, maintainability, and secure development practices.
+          </p>
+        </section>
+
+        <div class="case-study-next">
+          <a class="button secondary" href="../index.html#work">← Back to Work</a>
+          <a class="button primary" href="client-portal.html">Next Case Study →</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <a class="footer-logo" href="../index.html">Jeff Lukas</a>
+
+      <p class="footer-summary">
+        Software Developer focused on enterprise web applications, secure development, and application security.
+      </p>
+
+      <nav class="footer-nav">
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="../resume/Jeff-Lukas_resume.pdf" download>Resume</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

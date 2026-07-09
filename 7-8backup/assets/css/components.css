@@ -33,7 +33,7 @@
   width: 6px;
   height: 6px;
   margin-right: 8px;
-  border-radius: 25%;
+  border-radius: 50%;
   background: var(--accent);
   vertical-align: middle;
 }
@@ -76,7 +76,7 @@
 .skill-card,
 .featured-card,
 .contact-card {
-  border-radius: 5px;
+  border-radius: 18px;
   transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 

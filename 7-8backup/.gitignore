@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+._*
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# VS Code
+.vscode/
+
+# Node
+node_modules/
+
+# Logs
+*.log
+
+# Environment Variables
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+
+# Temporary Files
+*.tmp
+*.temp
