@@ -31,20 +31,38 @@
 .hero-home {
   max-width: none;
   min-height: 760px;
+  position: relative;
+  overflow: hidden;
+  background-color: #070b12;
+}
+
+.hero-home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../images/hero_bg.png");
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  transform: translateX(140px);
+  z-index: 0;
+}
+
+.hero-home::after {
+  content: "";
+  position: absolute;
+  inset: 0;
   background:
     linear-gradient(
       90deg,
       #070b12 0%,
-      #070b12 24%,
-      rgba(7, 11, 18, 0.96) 38%,
-      rgba(7, 11, 18, 0.78) 52%,
-      rgba(7, 11, 18, 0.38) 70%,
+      #070b12 32%,
+      rgba(7, 11, 18, 0.96) 46%,
+      rgba(7, 11, 18, 0.68) 62%,
+      rgba(7, 11, 18, 0.28) 80%,
       rgba(7, 11, 18, 0.08) 100%
-    ),
-    url("../images/hero_bg.png");
-  background-size: cover;
-  background-position: right center;
-  background-repeat: no-repeat;
+    );
+  z-index: 0;
 }
 
 .hero-inner {
@@ -66,6 +84,13 @@
   max-width: none;
 }
 
+.section-band-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 96px 24px;
+  border-top: 1px solid var(--line);
+}
+
 .contact-home {
   background:
     linear-gradient(
@@ -75,12 +100,6 @@
       rgba(7, 11, 18, 0.55) 60%,
       rgba(7, 11, 18, 0.15) 100%
     );
-}
-
-.section-band-inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 96px 24px;
 }
 
 .footer-content {
@@ -107,6 +126,9 @@
   white-space: nowrap;
 }
 
+/* ==========================
+   Responsive
+========================== */
 @media (max-width: 900px) {
   .footer-content {
     flex-direction: column;
@@ -122,7 +144,37 @@
     flex-direction: column;
   }
 
+  .hero,
+  .section {
+    padding: 64px 24px;
+  }
+
   .hero {
     padding-top: 72px;
   }
+
+  .hero-home::before {
+    transform: none;
+    background-position: 70% center;
+    opacity: 0.35;
+  }
+
+  .hero-home::after {
+    background: rgba(7, 11, 18, 0.88);
+  }
+
+  .hero-inner h1 {
+    max-width: 100%;
+    font-size: clamp(3rem, 13vw, 4.5rem);
+    line-height: 0.95;
+  }
+
+  .hero-home .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-stack {
+    gap: 10px;
+  }
 }
+

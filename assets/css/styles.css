@@ -20,13 +20,6 @@
 
 .skills-sidebar {
   height: 100%;
-}
-
-.skill-panel-large {
-  height: 100%;
-}
-
-.skills-sidebar {
   display: grid;
   gap: 14px;
 }

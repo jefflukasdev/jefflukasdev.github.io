@@ -97,6 +97,18 @@
 .contact-section {
   padding: 96px 24px;
   background: #0b0f17;
+  position: relative;
+}
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(calc(100% - 48px), var(--max-width));
+  height: 1px;
+  background: var(--line);
+  transform: translateX(-50%);
 }
 
 .contact-intro h2 {
@@ -346,6 +358,49 @@
 
 .about-card-grid {
   margin-top: 56px;
+}
+
+.about-image-mobile {
+  display: none;
+}
+
+.about-image-desktop {
+  display: block;
+}
+
+@media (max-width: 800px) {
+  .about-layout {
+    display: block;
+  }
+
+  .about-image-desktop {
+    display: none;
+  }
+
+  .about-image-mobile {
+    display: flex;
+    justify-content: center;
+    margin: 28px 0 32px;
+  }
+
+  .about-image-mobile .about-image {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .about-copy h1 {
+    max-width: 100%;
+    font-size: clamp(2.6rem, 11vw, 3.8rem);
+    line-height: 1;
+  }
+
+  .about-copy p {
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
 }
 
 @media (max-width: 800px) {
