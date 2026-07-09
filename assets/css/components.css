@@ -57,13 +57,27 @@
 }
 
 .primary {
-  background: var(--text);
-  color: var(--bg);
+  background: #fce395;
+  color: #070b12;
+  border: 1px solid #fce395;
+}
+
+.primary:hover {
+  background: #f6dc82;
+  border-color: #f6dc82;
+  box-shadow: 0 10px 30px rgba(252, 227, 149, 0.22);
 }
 
 .secondary {
-  border: 1px solid var(--line);
+  background: transparent;
   color: var(--text);
+  border: 1px solid rgba(252, 227, 149, 0.35);
+}
+
+.secondary:hover {
+  background: rgba(252, 227, 149, 0.08);
+  border-color: #fce395;
+  color: #fce395;
 }
 
 .card-grid {

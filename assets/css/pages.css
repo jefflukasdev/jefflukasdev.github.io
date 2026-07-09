@@ -26,16 +26,16 @@
 }
 
 .hero-stack span {
-  color: #f59e42;
+  color: #ffffff;
   border: none;
   border-radius: 0;
   padding: 0;
   font-size: 0.9rem;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .hero-stack span:first-child {
-  color: #f59e42;
+  color: #ffffff;
 }
 
 .section-band-light .eyebrow {
@@ -150,7 +150,7 @@
 }
 
 .contact-intro .contact-links a {
-  color: white;
+  color: #38bdf8;
 }
 
 .contact-form {
@@ -320,9 +320,9 @@
 
 .about-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 420px;
-  gap: 48px;
-  align-items: stretch;
+  grid-template-columns: minmax(0, 0.9fr) 560px;
+  gap: 56px;
+  align-items: center;
 }
 
 .about-copy p {
@@ -336,11 +336,11 @@
 }
 
 .about-image {
-  width: 100%;
-  height: 100%;
-  max-height: 420px;
-  object-fit: cover;
+  width: 92%;
+  max-width: 560px;
+  height: auto;
   display: block;
+  margin-left: auto;
 }
 
 .about-card-grid {
