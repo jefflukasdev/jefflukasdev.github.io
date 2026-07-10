@@ -25,6 +25,26 @@ function setActiveLink() {
   });
 }
 
+document.querySelectorAll(".lightbox-trigger").forEach((link) => {
+  link.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    const overlay = document.createElement("div");
+    overlay.className = "lightbox-overlay";
+
+    overlay.innerHTML = `
+      <button class="lightbox-close" aria-label="Close image">×</button>
+      <img src="${this.href}" alt="">
+    `;
+
+    document.body.appendChild(overlay);
+
+    overlay.addEventListener("click", () => {
+      overlay.remove();
+    });
+  });
+});
+
 window.addEventListener("scroll", setActiveLink);
 window.addEventListener("load", setActiveLink);
 window.addEventListener("resize", setActiveLink);
