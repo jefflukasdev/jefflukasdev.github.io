@@ -99,7 +99,7 @@
   background: var(--surface);
   border: 1px solid var(--line);
   padding: 28px;
-  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 18px 60px rgba(0,0,0,.18);
 }
 
 .card:hover,

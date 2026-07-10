@@ -347,6 +347,33 @@
   color: #03111c;
 }
 
+.about-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-top: 64px;
+}
+
+.about-card-grid .card {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0 32px;
+}
+
+.about-card-grid .card:not(:first-child) {
+    border-left: 1px solid var(--line);
+}
+
+.about-card-grid .card:first-child {
+    padding-left: 0;
+}
+
+.about-card-grid .card:last-child {
+    padding-right: 0;
+}
+
 /* ==========================
    Responsive
 ========================== */
@@ -405,6 +432,19 @@
     max-width: 100%;
     font-size: 1rem;
     line-height: 1.7;
+  }
+
+  .about-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-card-grid .card {
+    padding: 28px 0;
+  }
+
+  .about-card-grid .card:not(:first-child) {
+    border-left: none;
+    border-top: 1px solid var(--line);
   }
 }
 
