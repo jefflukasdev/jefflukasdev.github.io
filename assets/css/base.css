@@ -1,6 +1,7 @@
 /* ==========================
    base.css
 ========================== */
+
 :root {
   --bg: #0b0f17;
   --surface: #111827;
@@ -17,6 +18,11 @@
   --light-text: #0f172a;
   --light-muted: #334155;
   --light-line: #cbd5e1;
+  --yellow: #fce395;
+  --yellow-hover: #f6dc82;
+
+  --font-heading: "Oswald", sans-serif;
+  --font-body: "Libre Franklin", Arial, Helvetica, sans-serif;
 }
 
 * {
@@ -29,7 +35,7 @@ html {
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
@@ -51,11 +57,17 @@ p {
   margin-top: 0;
 }
 
+h1,
+h2 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
 h1 {
   max-width: 980px;
   font-size: clamp(3rem, 7vw, 5.6rem);
   line-height: 1;
-  letter-spacing: -0.055em;
+  letter-spacing: -0.035em;
   margin-bottom: 28px;
 }
 
@@ -63,7 +75,7 @@ h2 {
   max-width: 850px;
   font-size: clamp(2rem, 4vw, 3.15rem);
   line-height: 1.08;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.025em;
   margin-bottom: 18px;
 }
 
@@ -73,7 +85,12 @@ h3 {
   margin-bottom: 14px;
 }
 
+p {
+  font-family: var(--font-body);
+}
+
 .eyebrow {
+  font-family: var(--font-body);
   color: var(--accent);
   font-size: 0.85rem;
   font-weight: 700;

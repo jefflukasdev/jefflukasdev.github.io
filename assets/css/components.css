@@ -1,15 +1,16 @@
 /* ==========================
    components.css
 ========================== */
+
 .logo {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
-    height: 40px;
-    width: auto;
-    display: block;
+  height: 40px;
+  width: auto;
+  display: block;
 }
 
 .nav {
@@ -40,7 +41,8 @@
 
 .button,
 .contact-links a,
-.card a {
+.card a,
+.featured-card a {
   display: inline-flex;
   align-items: center;
   font-weight: 700;
@@ -48,8 +50,13 @@
 
 .button {
   padding: 13px 18px;
-  border-radius: 999px;
-  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  border-radius: 8px;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .button:hover {
@@ -57,14 +64,14 @@
 }
 
 .primary {
-  background: #fce395;
+  background: var(--yellow);
   color: #070b12;
-  border: 1px solid #fce395;
+  border: 1px solid var(--yellow);
 }
 
 .primary:hover {
-  background: #f6dc82;
-  border-color: #f6dc82;
+  background: var(--yellow-hover);
+  border-color: var(--yellow-hover);
   box-shadow: 0 10px 30px rgba(252, 227, 149, 0.22);
 }
 
@@ -76,8 +83,8 @@
 
 .secondary:hover {
   background: rgba(252, 227, 149, 0.08);
-  border-color: #fce395;
-  color: #fce395;
+  border-color: var(--yellow);
+  color: var(--yellow);
 }
 
 .card-grid {
@@ -91,7 +98,10 @@
 .featured-card,
 .contact-card {
   border-radius: 5px;
-  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
 }
 
 .card,
@@ -99,7 +109,7 @@
   background: var(--surface);
   border: 1px solid var(--line);
   padding: 28px;
-  box-shadow: 0 18px 60px rgba(0,0,0,.18);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.18);
 }
 
 .card:hover,
@@ -129,8 +139,13 @@
 
 .card a,
 .featured-card a {
-  color: var(--accent);
-  font-weight: 700;
+  color: var(--yellow);
+  transition: color 0.2s ease;
+}
+
+.card a:hover,
+.featured-card a:hover {
+  color: var(--yellow-hover);
 }
 
 a:focus-visible,
@@ -156,7 +171,7 @@ textarea:focus-visible {
 .lightbox-overlay img {
   max-width: 95vw;
   max-height: 90vh;
-  border-radius: 8px;
+  border-radius: 0px;
   border: 1px solid var(--line);
   box-shadow: 0 30px 90px rgba(0, 0, 0, 0.55);
 }

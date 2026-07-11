@@ -320,14 +320,14 @@
 .case-image-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
+  gap: 12px;
 }
 
 .case-image-row img {
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
-  border-radius: 14px;
+  border-radius: 1px;
   border: 1px solid var(--line);
   display: block;
 }
@@ -340,11 +340,6 @@
   margin-top: 24px;
   padding-top: 32px;
   border-top: 1px solid var(--line);
-}
-
-.case-study-next .button.primary {
-  background: var(--accent);
-  color: #03111c;
 }
 
 .about-card-grid {
