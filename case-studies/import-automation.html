@@ -6,13 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Secure Document Automation & Boundary Provisioning | Jeff Lukas</title>
+
   <meta name="description"
-    content="Case study focused on deterministic document import, boundary automation, validation workflows, and Zero Trust-inspired secure development decisions." />
+    content="Case study covering deterministic document import, Python-based extraction, boundary and assessment provisioning, validation workflows, SQL-backed functionality, and security-minded automation." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link
     href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
     rel="stylesheet">
+
   <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 
@@ -28,7 +32,7 @@
         <a href="../index.html#about">About</a>
         <a href="../index.html#contact">Contact</a>
         <a href="../resume/Jeff-Lukas_resume.pdf" download>Resume</a>
-    </nav>
+      </nav>
     </div>
   </header>
 
@@ -36,11 +40,13 @@
     <section class="case-hero-layout">
       <div class="case-hero-copy">
         <p class="eyebrow">Case Study</p>
-        <h1>Secure Document Automation & Boundary Provisioning</h1>
+
+        <h1>Secure Automation & Creation</h1>
 
         <p class="hero-text">
-          Building deterministic document import workflows that automated boundary and assessment setup
-          while prioritizing validation, predictable behavior, user verification, and Zero Trust-inspired design.
+          Building deterministic document import workflows that automated boundary
+          and assessment setup while prioritizing validation, predictable behavior,
+          user review, and security-minded development.
         </p>
 
         <div class="project-meta">
@@ -48,7 +54,8 @@
           <span>SQL</span>
           <span>JavaScript</span>
           <span>Document Parsing</span>
-          <span>Zero Trust Principles</span>
+          <span>Workflow Automation</span>
+          <span>Data Validation</span>
         </div>
       </div>
 
@@ -58,66 +65,239 @@
     </section>
 
     <section class="section case-study-simple">
+
       <section class="case-section">
-        <p class="case-label">Problem</p>
-        <h2>The challenge</h2>
+        <p class="eyebrow">Overview</p>
+        <h2>My Role</h2>
+
         <p>
-          Users needed a faster way to create assessments and authorization boundaries without manually
-          copying information across multiple documents. AI-based import could have introduced accuracy,
-          security, and trust concerns, especially when working with compliance-related information.
+          One of the company’s goals was to reduce the time required to prepare
+          boundaries and cybersecurity assessments. Auditors and assessors often
+          needed to copy and compile information manually from existing documents into multiple
+          application fields, making the process repetitive and time-consuming.
+        </p>
+
+        <p>
+          I designed and developed a document import workflow that extracted known
+          information from uploaded files, mapped it into application fields, and
+          allowed users to review and complete the data before it became part of the
+          system.
+        </p>
+
+        <div class="project-meta">
+          <span>Role: Software Developer</span>
+          <span>Workflow Design</span>
+          <span>Python Development</span>
+          <span>Front-End Integration</span>
+          <span>SQL Integration</span>
+          <span>Validation</span>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <p class="eyebrow">Problem</p>
+        <h2>The Challenge</h2>
+
+        <p>
+          Creating a new boundary or assessment required users to locate information
+          across multiple source documents and manually enter it into the application.
+          A process intended to simplify cybersecurity and compliance work still
+          required significant administrative effort before the user could begin the
+          actual assessment.
+        </p>
+
+        <p>
+          The import process also needed to behave predictably. Automatically accepting
+          uncertain or incorrectly mapped information could create inaccurate application
+          records and reduce user trust. An AI-dependent workflow could also introduce
+          additional approval, explainability, privacy, or deployment concerns for some
+          enterprise and government environments.
+        </p>
+
+        <p>
+          The challenge was to automate the repetitive parts of the process while
+          preserving user control, validation, and clear visibility into what information
+          would be stored.
         </p>
       </section>
 
       <div class="case-image-row">
-        <img src="../assets/images/case-studies/import/import_center_first.png" alt="Early document import concept">
-        <img src="../assets/images/case-studies/import/import_center_first.png" alt="Early import workflow screen">
-        <img src="../assets/images/case-studies/import/import_center_first.png" alt="Early boundary import screen">
-        <img src="../assets/images/case-studies/import/import_center_first.png" alt="Early assessment import screen">
+        <a
+          href="../assets/images/case-studies/import/import_center_first.png"
+          class="lightbox-trigger">
+          <img
+            src="../assets/images/case-studies/import/import_center_first.png"
+            alt="Early document import concept">
+        </a>
+
+        <a
+          href="../assets/images/case-studies/import/import_center_first.png"
+          class="lightbox-trigger">
+          <img
+            src="../assets/images/case-studies/import/import_center_first.png"
+            alt="Early import workflow screen">
+        </a>
+
+        <a
+          href="../assets/images/case-studies/import/import_center_first.png"
+          class="lightbox-trigger">
+          <img
+            src="../assets/images/case-studies/import/import_center_first.png"
+            alt="Early boundary import workflow">
+        </a>
+
+        <a
+          href="../assets/images/case-studies/import/import_center_first.png"
+          class="lightbox-trigger">
+          <img
+            src="../assets/images/case-studies/import/import_center_first.png"
+            alt="Early assessment import workflow">
+        </a>
       </div>
 
       <section class="case-section">
-        <p class="case-label">Solution</p>
-        <h2>Integrated creation wizard</h2>
+        <p class="eyebrow">Contributions</p>
+        <h2>Design & Development</h2>
+
         <p>
-          I redesigned the workflow by integrating import functionality directly into the sidebar creation wizard,
-          where users could import a document, review mapped fields, manually complete missing information,
-          and verify data before anything was committed to the application.
+          My work covered the extraction logic, interface workflow, field mapping,
+          validation process, and integration of imported data with the application’s
+          existing boundary and assessment functionality.
         </p>
-      </section>
 
-      <div class="case-image-row">
-        <img src="../assets/images/case-studies/import/import_center_final.png" alt="Final document import workflow">
-        <img src="../assets/images/case-studies/import/import_center_final.png" alt="Final creation wizard workflow">
-        <img src="../assets/images/case-studies/import/import_center_final.png" alt="Final mapped fields workflow">
-        <img src="../assets/images/case-studies/import/import_center_final.png" alt="Final verification workflow">
-      </div>
-
-      <section class="case-section">
-        <p class="case-label">Execution</p>
-        <h2>Key contributions</h2>
         <ul>
-          <li>Built Python-based document extractors and boundary mappers.</li>
-          <li>Mapped known document fields into application workflows.</li>
-          <li>Used SQL-backed logic to support imported assessment and boundary data.</li>
-          <li>Integrated import functionality into the creation wizard to reduce workflow complexity.</li>
-          <li>Added user verification before imported information became application data.</li>
-          <li>Reduced reliance on AI while still achieving workflow automation.</li>
+          <li>
+            Built Python-based document extractors for supported Word, Excel, PDF,
+            and CSV files.
+          </li>
+
+          <li>
+            Developed mapping logic that connected recognized document content to
+            boundary and assessment fields.
+          </li>
+
+          <li>
+            Integrated document import into the application’s existing creation workflow
+            rather than requiring users to move through a separate disconnected tool.
+          </li>
+
+          <li>
+            Created a draft-and-review process that allowed users to inspect mapped
+            information before completing an import.
+          </li>
+
+          <li>
+            Allowed users to manually complete missing or unrecognized fields before
+            committing data to the application.
+          </li>
+
+          <li>
+            Connected imported information to SQL-backed boundary and assessment
+            workflows.
+          </li>
+
+          <li>
+            Added validation and user-confirmation steps so imported information was
+            not treated as trusted application data automatically.
+          </li>
+
+          <li>
+            Designed the workflow to reduce dependence on probabilistic AI processing
+            while still automating repetitive document-handling tasks.
+          </li>
         </ul>
       </section>
 
       <section class="case-section">
-        <p class="case-label">Result</p>
-        <h2>Impact</h2>
+        <p class="eyebrow">Approach</p>
+        <h2>Integrated Creation and Verification Workflow</h2>
+
         <p>
-          The final feature reduced manual data entry, supported boundary and assessment automation, and preserved
-          user trust through validation and review. It also demonstrated a security-minded approach to automation:
-          improve efficiency without blindly trusting imported data or introducing unnecessary AI-driven risk.
+          I initially explored the import feature as a dedicated Import Center. As the
+          workflow developed, I recognized that users would benefit from importing
+          information at the same point where they created a boundary or assessment.
+        </p>
+
+        <p>
+          I integrated the import process into the application’s existing creation
+          wizard. Users could upload a document, review extracted and mapped fields,
+          manually provide missing information, and verify the completed draft before
+          anything was saved.
+        </p>
+
+        <p>
+          This approach followed a verify-before-trust model. The system assisted the
+          user by extracting and organizing information, but the user remained responsible
+          for reviewing the result before the application accepted it as final data.
+        </p>
+      </section>
+
+      <div class="case-image-row">
+        <a
+          href="../assets/images/case-studies/import/import_center_final.png"
+          class="lightbox-trigger">
+          <img
+            src="../assets/images/case-studies/import/import_center_final.png"
+            alt="Final document import workflow">
+        </a>
+
+        <a
+          href="../assets/images/case-studies/import/import_center_final.png"
+          class="lightbox-trigger">
+          <img
+            src="../assets/images/case-studies/import/import_center_final.png"
+            alt="Final integrated creation wizard">
+        </a>
+
+        <a
+          href="../assets/images/case-studies/import/import_center_final.png"
+          class="lightbox-trigger">
+          <img
+            src="../assets/images/case-studies/import/import_center_final.png"
+            alt="Final mapped-fields review workflow">
+        </a>
+
+        <a
+          href="../assets/images/case-studies/import/import_center_final.png"
+          class="lightbox-trigger">
+          <img
+            src="../assets/images/case-studies/import/import_center_final.png"
+            alt="Final user-verification workflow">
+        </a>
+      </div>
+
+      <section class="case-section">
+        <p class="eyebrow">Result</p>
+        <h2>A faster Workflow with User-controlled Validation</h2>
+
+        <p>
+          The final workflow reduced repetitive data entry by extracting and organizing
+          information that users would otherwise need to copy manually across multiple
+          application fields.
+        </p>
+
+        <p>
+          Integrating the feature into the creation wizard kept the process connected
+          to the user’s existing workflow, while the draft, review, and confirmation
+          stages helped prevent uncertain imported information from being accepted
+          automatically.
+        </p>
+
+        <p>
+          The project gave me practical experience with Python-based file processing,
+          document extraction, field mapping, SQL-backed workflows, front-end integration,
+          validation, and security-minded automation within an enterprise application.
         </p>
       </section>
 
       <div class="case-study-next">
-        <a class="button secondary" href="enterprise.html">Previous Case Study</a>
-        <a class="button primary" href="client-portal.html">Next Case Study</a>
+        <a class="button secondary" href="enterprise.html">
+          Previous Case Study
+        </a>
+
+        <a class="button primary" href="client-portal.html">
+          Next Case Study
+        </a>
       </div>
     </section>
   </main>
