@@ -1,20 +1,25 @@
+/* ==========================
+   layout.css
+========================== */
+
 .header-shell {
   position: sticky;
   top: 0;
-  width: 100%;
   z-index: 1000;
+  width: 100%;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
   background: rgba(7, 11, 18, 0.96);
   backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 .site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 18px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .hero,
@@ -29,9 +34,9 @@
 }
 
 .hero-home {
-  max-width: none;
-  min-height: 760px;
   position: relative;
+  min-height: 760px;
+  max-width: none;
   overflow: hidden;
   background-color: #070b12;
 }
@@ -40,18 +45,19 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("../images/hero_bg.png");
-  background-size: cover;
-  background-position: right center;
-  background-repeat: no-repeat;
-  transform: translateX(140px);
   z-index: 0;
+  background-image: url("../images/hero_bg.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+  transform: translateX(140px);
 }
 
 .hero-home::after {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 0;
   background:
     linear-gradient(
       90deg,
@@ -62,14 +68,13 @@
       rgba(7, 11, 18, 0.28) 80%,
       rgba(7, 11, 18, 0.08) 100%
     );
-  z-index: 0;
 }
 
 .hero-inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
   position: relative;
   z-index: 1;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 .hero-inner h1 {
@@ -103,41 +108,41 @@
 }
 
 .site-footer {
-    background: #05070a;
-    border-top: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+  background: #05070a;
 }
 
 .footer-content {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 34px 24px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 34px 24px;
 }
 
 .copyright {
-    margin: 0;
-    color: var(--text);
-    font-size: 0.95rem;
-    font-weight: 400;
+  margin: 0;
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 400;
 }
 
 .back-to-top {
-    color: var(--muted);
-    font-size: 0.95rem;
-    font-weight: 600;
-    transition: color .2s ease;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
 }
 
 .back-to-top:hover {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 /* ==========================
    Responsive
 ========================== */
+
 @media (max-width: 900px) {
   .footer-content {
     flex-direction: column;
@@ -148,9 +153,9 @@
 
 @media (max-width: 800px) {
   .site-header {
+    flex-direction: column;
     align-items: flex-start;
     gap: 18px;
-    flex-direction: column;
   }
 
   .hero,
@@ -162,10 +167,14 @@
     padding-top: 72px;
   }
 
+  .hero-home {
+    min-height: auto;
+  }
+
   .hero-home::before {
-    transform: none;
-    background-position: 70% center;
     opacity: 0.35;
+    background-position: 70% center;
+    transform: none;
   }
 
   .hero-home::after {
@@ -181,9 +190,4 @@
   .hero-home .hero-text {
     max-width: 100%;
   }
-
-  .hero-stack {
-    gap: 10px;
-  }
 }
-

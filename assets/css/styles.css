@@ -1,10 +1,15 @@
 /* ==========================
    styles.css
 ========================== */
+
 @import url("base.css");
 @import url("layout.css");
 @import url("components.css");
 @import url("pages.css");
+
+/* ==========================
+   Skills + Work Section
+========================== */
 
 .experience-section {
   padding-top: 96px;
@@ -14,40 +19,40 @@
 .experience-layout {
   display: grid;
   grid-template-columns: 280px minmax(0, 1fr);
-  gap: 28px;
   align-items: stretch;
+  gap: 28px;
 }
 
 .skills-sidebar {
-  height: 100%;
   display: grid;
   gap: 14px;
+  height: 100%;
 }
 
 .skill-panel {
-  background: var(--surface);
+  padding: 18px;
   border: 1px solid var(--line);
   border-radius: 16px;
-  padding: 18px;
+  background: var(--surface);
 }
 
 .skill-panel h3 {
-  font-size: 0.95rem;
   margin-bottom: 8px;
+  font-size: 0.95rem;
 }
 
 .skill-panel p {
+  margin: 0;
   color: var(--muted);
   font-size: 0.92rem;
   line-height: 1.55;
-  margin: 0;
 }
 
 .skill-panel-large {
-  height: 100%;
   display: grid;
-  gap: 22px;
   align-content: start;
+  gap: 22px;
+  height: 100%;
 }
 
 .skill-group {
@@ -57,13 +62,13 @@
 
 .skill-group:last-child {
   padding-bottom: 0;
-  border-bottom: none;
+  border-bottom: 0;
 }
 
 .work-showcase {
-  min-width: 0;
   display: grid;
   gap: 24px;
+  min-width: 0;
 }
 
 .work-showcase .featured-card {
@@ -78,17 +83,14 @@
 }
 
 .secondary-projects .card {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
 }
 
 .secondary-projects .card a {
   margin-top: auto;
-}
-
-.hero-stack-bullet {
-    color: #ffffff !important;
-    font-weight: 400;
 }
 
 @media (max-width: 1000px) {

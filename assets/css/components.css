@@ -8,9 +8,9 @@
 }
 
 .logo img {
-  height: 40px;
-  width: auto;
   display: block;
+  width: auto;
+  height: 40px;
 }
 
 .nav {
@@ -53,7 +53,7 @@
   border-radius: 8px;
   transition:
     transform 0.2s ease,
-    background 0.2s ease,
+    background-color 0.2s ease,
     border-color 0.2s ease,
     color 0.2s ease,
     box-shadow 0.2s ease;
@@ -64,26 +64,26 @@
 }
 
 .primary {
+  border: 1px solid var(--yellow);
   background: var(--yellow);
   color: #070b12;
-  border: 1px solid var(--yellow);
 }
 
 .primary:hover {
-  background: var(--yellow-hover);
   border-color: var(--yellow-hover);
+  background: var(--yellow-hover);
   box-shadow: 0 10px 30px rgba(252, 227, 149, 0.22);
 }
 
 .secondary {
+  border: 1px solid rgba(252, 227, 149, 0.35);
   background: transparent;
   color: var(--text);
-  border: 1px solid rgba(252, 227, 149, 0.35);
 }
 
 .secondary:hover {
-  background: rgba(252, 227, 149, 0.08);
   border-color: var(--yellow);
+  background: rgba(252, 227, 149, 0.08);
   color: var(--yellow);
 }
 
@@ -101,14 +101,14 @@
   transition:
     transform 0.2s ease,
     border-color 0.2s ease,
-    background 0.2s ease;
+    background-color 0.2s ease;
 }
 
 .card,
 .skill-card {
-  background: var(--surface);
-  border: 1px solid var(--line);
   padding: 28px;
+  border: 1px solid var(--line);
+  background: var(--surface);
   box-shadow: 0 18px 60px rgba(0, 0, 0, 0.18);
 }
 
@@ -133,8 +133,8 @@
   color: var(--accent) !important;
   font-size: 0.8rem;
   font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .card a,
@@ -156,23 +156,30 @@ textarea:focus-visible {
   outline-offset: 4px;
 }
 
+/* Lightbox */
+
+.lightbox-trigger {
+  display: block;
+  cursor: zoom-in;
+}
+
 .lightbox-overlay {
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: rgba(5, 7, 10, 0.92);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 32px;
+  background: rgba(5, 7, 10, 0.92);
   cursor: zoom-out;
 }
 
 .lightbox-overlay img {
   max-width: 95vw;
   max-height: 90vh;
-  border-radius: 0px;
   border: 1px solid var(--line);
+  border-radius: 0;
   box-shadow: 0 30px 90px rgba(0, 0, 0, 0.55);
 }
 
@@ -180,9 +187,9 @@ textarea:focus-visible {
   position: fixed;
   top: 24px;
   right: 28px;
+  border: 0;
   background: none;
-  border: none;
-  color: white;
+  color: #ffffff;
   font-size: 2rem;
   cursor: pointer;
 }
