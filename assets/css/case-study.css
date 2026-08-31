@@ -249,6 +249,65 @@
 }
 
 /* ============================================
+   PROCESS CASE STUDY - DESKTOP LAYOUT
+============================================ */
+
+#processModal .process-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 420px;
+    gap: 4rem;
+    align-items: start;
+
+    padding: 3rem 4rem 4rem;
+    border-top: 1px solid var(--border);
+}
+
+
+/* LEFT COLUMN */
+
+#processModal .process-content__text {
+    min-width: 0;
+}
+
+#processModal .process-content__text h3 {
+    margin-bottom: 1.5rem;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+
+    color: var(--text-bright);
+}
+
+#processModal .process-content__text p {
+    color: var(--text-soft);
+    font-size: 0.95rem;
+    line-height: 1.75;
+}
+
+#processModal .process-content__text p + p {
+    margin-top: 1.5rem;
+}
+
+
+/* RIGHT COLUMN */
+
+#processModal .process-content__gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+/* Override normal 4-column thumbnail sizing
+   ONLY inside the Process case study */
+
+#processModal .process-content__gallery .gallery-thumb {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+}
+
+/* ============================================
    LIGHTBOX
 ============================================ */
 
@@ -402,4 +461,31 @@
   .lightbox__arrow--right {
     right: 0.5rem;
   }
+}
+
+@media (max-width: 900px) {
+
+    #processModal .process-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    #processModal .process-content__gallery {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+}
+
+
+@media (max-width: 520px) {
+
+    #processModal .process-content {
+        padding: 1.5rem 1rem 2rem;
+    }
+
+    #processModal .process-content__gallery {
+        grid-template-columns: 1fr;
+    }
 }
