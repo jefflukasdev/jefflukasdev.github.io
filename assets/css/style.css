@@ -726,6 +726,13 @@ textarea {
     color: var(--primary);
 }
 
+.gallery-thumb video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 /* ============================================
    CONTACT
 ============================================ */
