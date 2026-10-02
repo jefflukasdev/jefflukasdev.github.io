@@ -1,145 +1,186 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  const thumbnails = Array.from(
-    document.querySelectorAll(".gallery-thumb")
-  );
-
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImage = document.getElementById("lightboxImage");
-
-  const closeButton = document.getElementById("lightboxClose");
-  const previousButton = document.getElementById("lightboxPrev");
-  const nextButton = document.getElementById("lightboxNext");
-
-  let currentIndex = 0;
-
-
-  function showImage(index) {
-
-    if (!thumbnails.length) {
-      return;
-    }
-
-    currentIndex =
-      (index + thumbnails.length) % thumbnails.length;
-
-    const thumbnail = thumbnails[currentIndex];
-
-    const imagePath = thumbnail.dataset.full;
-
-    if (!imagePath) {
-      return;
-    }
-
-    const thumbnailImage =
-      thumbnail.querySelector("img");
-
-    lightboxImage.src = imagePath;
-
-    lightboxImage.alt =
-      thumbnailImage?.alt || "Portfolio gallery image";
-
-  }
-
-
-  function openLightbox(index) {
-
-    const imagePath =
-      thumbnails[index]?.dataset.full;
-
-    if (!imagePath) {
-      return;
-    }
-
-    showImage(index);
-
-    lightbox.classList.add("open");
-
-    lightbox.setAttribute(
-      "aria-hidden",
-      "false"
+    const thumbnails = Array.from(
+        document.querySelectorAll(".gallery-thumb")
     );
 
-    document.body.style.overflow = "hidden";
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxVideo = document.getElementById("lightboxVideo");
 
-  }
+    const closeButton = document.getElementById("lightboxClose");
+    const previousButton = document.getElementById("lightboxPrev");
+    const nextButton = document.getElementById("lightboxNext");
 
-
-  function closeLightbox() {
-
-    lightbox.classList.remove("open");
-
-    lightbox.setAttribute(
-      "aria-hidden",
-      "true"
-    );
-
-    document.body.style.overflow = "";
-
-  }
+    let currentIndex = 0;
 
 
-  thumbnails.forEach((thumbnail, index) => {
+    function showMedia(index) {
 
-    thumbnail.addEventListener("click", () => {
+        if (!thumbnails.length) {
+            return;
+        }
 
-      openLightbox(index);
+        currentIndex =
+            (index + thumbnails.length) % thumbnails.length;
+
+        const thumbnail = thumbnails[currentIndex];
+
+        const mediaPath = thumbnail.dataset.full;
+
+        if (!mediaPath) {
+            return;
+        }
+
+        const mediaType =
+            thumbnail.dataset.type === "video"
+                ? "video"
+                : "image";
+
+
+        /* -------------------------
+           VIDEO
+        ------------------------- */
+
+        if (mediaType === "video") {
+
+            lightboxImage.hidden = true;
+            lightboxImage.src = "";
+
+            lightboxVideo.hidden = false;
+            lightboxVideo.src = mediaPath;
+
+            lightboxVideo.load();
+
+        }
+
+
+        /* -------------------------
+           IMAGE
+        ------------------------- */
+
+        else {
+
+            lightboxVideo.pause();
+            lightboxVideo.removeAttribute("src");
+            lightboxVideo.load();
+            lightboxVideo.hidden = true;
+
+            const thumbnailImage =
+                thumbnail.querySelector("img");
+
+            lightboxImage.hidden = false;
+            lightboxImage.src = mediaPath;
+
+            lightboxImage.alt =
+                thumbnailImage?.alt ||
+                "Portfolio gallery image";
+
+        }
+
+    }
+
+
+    function openLightbox(index) {
+
+        const mediaPath =
+            thumbnails[index]?.dataset.full;
+
+        if (!mediaPath) {
+            return;
+        }
+
+        showMedia(index);
+
+        lightbox.classList.add("open");
+
+        lightbox.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+        document.body.style.overflow = "hidden";
+
+    }
+
+
+    function closeLightbox() {
+
+        lightbox.classList.remove("open");
+
+        lightbox.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+        document.body.style.overflow = "";
+
+        lightboxVideo?.pause();
+
+    }
+
+
+    thumbnails.forEach((thumbnail, index) => {
+
+        thumbnail.addEventListener("click", () => {
+
+            openLightbox(index);
+
+        });
 
     });
 
-  });
+
+    previousButton?.addEventListener("click", () => {
+
+        showMedia(currentIndex - 1);
+
+    });
 
 
-  previousButton?.addEventListener("click", () => {
+    nextButton?.addEventListener("click", () => {
 
-    showImage(currentIndex - 1);
+        showMedia(currentIndex + 1);
 
-  });
-
-
-  nextButton?.addEventListener("click", () => {
-
-    showImage(currentIndex + 1);
-
-  });
+    });
 
 
-  closeButton?.addEventListener("click", () => {
+    closeButton?.addEventListener("click", () => {
 
-    closeLightbox();
+        closeLightbox();
 
-  });
-
-
-  lightbox?.addEventListener("click", event => {
-
-    if (event.target === lightbox) {
-
-      closeLightbox();
-
-    }
-
-  });
+    });
 
 
-  document.addEventListener("keydown", event => {
+    lightbox?.addEventListener("click", event => {
 
-    if (!lightbox?.classList.contains("open")) {
-      return;
-    }
+        if (event.target === lightbox) {
 
-    if (event.key === "Escape") {
-      closeLightbox();
-    }
+            closeLightbox();
 
-    if (event.key === "ArrowLeft") {
-      showImage(currentIndex - 1);
-    }
+        }
 
-    if (event.key === "ArrowRight") {
-      showImage(currentIndex + 1);
-    }
+    });
 
-  });
+
+    document.addEventListener("keydown", event => {
+
+        if (!lightbox?.classList.contains("open")) {
+            return;
+        }
+
+        if (event.key === "Escape") {
+            closeLightbox();
+        }
+
+        if (event.key === "ArrowLeft") {
+            showMedia(currentIndex - 1);
+        }
+
+        if (event.key === "ArrowRight") {
+            showMedia(currentIndex + 1);
+        }
+
+    });
 
 });
