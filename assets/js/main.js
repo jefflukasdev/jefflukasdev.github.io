@@ -317,6 +317,230 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    function initializeLightbox() {
+
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxVideo = document.getElementById('lightboxVideo');
+
+        const closeButton = document.getElementById('lightboxClose');
+        const prevButton = document.getElementById('lightboxPrev');
+        const nextButton = document.getElementById('lightboxNext');
+
+        if (
+            !lightbox ||
+            !lightboxImage ||
+            !lightboxVideo ||
+            !closeButton ||
+            !prevButton ||
+            !nextButton
+        ) {
+            return;
+        }
+
+        let galleryMedia = [];
+        let currentIndex = 0;
+
+
+        function updateLightboxMedia() {
+
+            const item = galleryMedia[currentIndex];
+
+            if (!item) return;
+
+
+            // Stop/reset previous video
+            lightboxVideo.pause();
+            lightboxVideo.removeAttribute('src');
+            lightboxVideo.load();
+            lightboxVideo.hidden = true;
+
+            // Reset image
+            lightboxImage.hidden = true;
+            lightboxImage.src = '';
+            lightboxImage.alt = '';
+
+
+            // VIDEO
+            if (item.tagName.toLowerCase() === 'video') {
+
+                const source = item.querySelector('source');
+
+                const videoSrc =
+                    source?.getAttribute('src') ||
+                    item.getAttribute('src');
+
+                if (!videoSrc) return;
+
+                lightboxVideo.src = videoSrc;
+                lightboxVideo.hidden = false;
+                lightboxVideo.load();
+
+            }
+
+            // IMAGE
+            else {
+
+                lightboxImage.src = item.src;
+                lightboxImage.alt =
+                    item.alt || 'Portfolio gallery image';
+
+                lightboxImage.hidden = false;
+
+            }
+        }
+
+
+        function openLightbox(clickedMedia) {
+
+            const gallery =
+                clickedMedia.closest('.case-gallery');
+
+            if (!gallery) return;
+
+            galleryMedia = Array.from(
+                gallery.querySelectorAll(
+                    '.gallery-thumb img, .gallery-thumb video'
+                )
+            );
+
+            currentIndex =
+                galleryMedia.indexOf(clickedMedia);
+
+            if (currentIndex === -1) return;
+
+            updateLightboxMedia();
+
+            lightbox.classList.add('open');
+
+            lightbox.setAttribute(
+                'aria-hidden',
+                'false'
+            );
+
+            document.body.style.overflow = 'hidden';
+        }
+
+
+        function closeLightbox() {
+
+            lightbox.classList.remove('open');
+
+            lightbox.setAttribute(
+                'aria-hidden',
+                'true'
+            );
+
+            document.body.style.overflow = '';
+
+            lightboxVideo.pause();
+            lightboxVideo.removeAttribute('src');
+            lightboxVideo.load();
+
+            lightboxImage.src = '';
+            lightboxImage.alt = '';
+        }
+
+
+        function showNextMedia() {
+
+            if (!galleryMedia.length) return;
+
+            currentIndex =
+                (currentIndex + 1) %
+                galleryMedia.length;
+
+            updateLightboxMedia();
+        }
+
+
+        function showPreviousMedia() {
+
+            if (!galleryMedia.length) return;
+
+            currentIndex =
+                (currentIndex - 1 + galleryMedia.length) %
+                galleryMedia.length;
+
+            updateLightboxMedia();
+        }
+
+
+        const thumbnails =
+            document.querySelectorAll(
+                '.gallery-thumb img, .gallery-thumb video'
+            );
+
+
+        thumbnails.forEach(media => {
+
+            media.addEventListener('click', () => {
+
+                openLightbox(media);
+
+            });
+
+        });
+
+
+        closeButton.addEventListener(
+            'click',
+            closeLightbox
+        );
+
+
+        nextButton.addEventListener(
+            'click',
+            showNextMedia
+        );
+
+
+        prevButton.addEventListener(
+            'click',
+            showPreviousMedia
+        );
+
+
+        lightbox.addEventListener('click', event => {
+
+            if (event.target === lightbox) {
+
+                closeLightbox();
+
+            }
+
+        });
+
+
+        document.addEventListener('keydown', event => {
+
+            if (!lightbox.classList.contains('open')) {
+                return;
+            }
+
+            if (event.key === 'ArrowRight') {
+
+                showNextMedia();
+
+            }
+
+            if (event.key === 'ArrowLeft') {
+
+                showPreviousMedia();
+
+            }
+
+            if (event.key === 'Escape') {
+
+                event.stopImmediatePropagation();
+
+                closeLightbox();
+
+            }
+
+        });
+    }
+
     // Load modal HTML after the main page is ready
     loadCaseStudies();
 

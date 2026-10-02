@@ -1,186 +1,145 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const thumbnails = Array.from(
-        document.querySelectorAll(".gallery-thumb")
+  const thumbnails = Array.from(
+    document.querySelectorAll(".gallery-thumb")
+  );
+
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = document.getElementById("lightboxImage");
+
+  const closeButton = document.getElementById("lightboxClose");
+  const previousButton = document.getElementById("lightboxPrev");
+  const nextButton = document.getElementById("lightboxNext");
+
+  let currentIndex = 0;
+
+
+  function showImage(index) {
+
+    if (!thumbnails.length) {
+      return;
+    }
+
+    currentIndex =
+      (index + thumbnails.length) % thumbnails.length;
+
+    const thumbnail = thumbnails[currentIndex];
+
+    const imagePath = thumbnail.dataset.full;
+
+    if (!imagePath) {
+      return;
+    }
+
+    const thumbnailImage =
+      thumbnail.querySelector("img");
+
+    lightboxImage.src = imagePath;
+
+    lightboxImage.alt =
+      thumbnailImage?.alt || "Portfolio gallery image";
+
+  }
+
+
+  function openLightbox(index) {
+
+    const imagePath =
+      thumbnails[index]?.dataset.full;
+
+    if (!imagePath) {
+      return;
+    }
+
+    showImage(index);
+
+    lightbox.classList.add("open");
+
+    lightbox.setAttribute(
+      "aria-hidden",
+      "false"
     );
 
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImage = document.getElementById("lightboxImage");
-    const lightboxVideo = document.getElementById("lightboxVideo");
+    document.body.style.overflow = "hidden";
 
-    const closeButton = document.getElementById("lightboxClose");
-    const previousButton = document.getElementById("lightboxPrev");
-    const nextButton = document.getElementById("lightboxNext");
-
-    let currentIndex = 0;
+  }
 
 
-    function showMedia(index) {
+  function closeLightbox() {
 
-        if (!thumbnails.length) {
-            return;
-        }
+    lightbox.classList.remove("open");
 
-        currentIndex =
-            (index + thumbnails.length) % thumbnails.length;
+    lightbox.setAttribute(
+      "aria-hidden",
+      "true"
+    );
 
-        const thumbnail = thumbnails[currentIndex];
+    document.body.style.overflow = "";
 
-        const mediaPath = thumbnail.dataset.full;
-
-        if (!mediaPath) {
-            return;
-        }
-
-        const mediaType =
-            thumbnail.dataset.type === "video"
-                ? "video"
-                : "image";
+  }
 
 
-        /* -------------------------
-           VIDEO
-        ------------------------- */
+  thumbnails.forEach((thumbnail, index) => {
 
-        if (mediaType === "video") {
+    thumbnail.addEventListener("click", () => {
 
-            lightboxImage.hidden = true;
-            lightboxImage.src = "";
+      openLightbox(index);
 
-            lightboxVideo.hidden = false;
-            lightboxVideo.src = mediaPath;
+    });
 
-            lightboxVideo.load();
-
-        }
+  });
 
 
-        /* -------------------------
-           IMAGE
-        ------------------------- */
+  previousButton?.addEventListener("click", () => {
 
-        else {
+    showImage(currentIndex - 1);
 
-            lightboxVideo.pause();
-            lightboxVideo.removeAttribute("src");
-            lightboxVideo.load();
-            lightboxVideo.hidden = true;
+  });
 
-            const thumbnailImage =
-                thumbnail.querySelector("img");
 
-            lightboxImage.hidden = false;
-            lightboxImage.src = mediaPath;
+  nextButton?.addEventListener("click", () => {
 
-            lightboxImage.alt =
-                thumbnailImage?.alt ||
-                "Portfolio gallery image";
+    showImage(currentIndex + 1);
 
-        }
+  });
+
+
+  closeButton?.addEventListener("click", () => {
+
+    closeLightbox();
+
+  });
+
+
+  lightbox?.addEventListener("click", event => {
+
+    if (event.target === lightbox) {
+
+      closeLightbox();
 
     }
 
+  });
 
-    function openLightbox(index) {
 
-        const mediaPath =
-            thumbnails[index]?.dataset.full;
+  document.addEventListener("keydown", event => {
 
-        if (!mediaPath) {
-            return;
-        }
-
-        showMedia(index);
-
-        lightbox.classList.add("open");
-
-        lightbox.setAttribute(
-            "aria-hidden",
-            "false"
-        );
-
-        document.body.style.overflow = "hidden";
-
+    if (!lightbox?.classList.contains("open")) {
+      return;
     }
 
-
-    function closeLightbox() {
-
-        lightbox.classList.remove("open");
-
-        lightbox.setAttribute(
-            "aria-hidden",
-            "true"
-        );
-
-        document.body.style.overflow = "";
-
-        lightboxVideo?.pause();
-
+    if (event.key === "Escape") {
+      closeLightbox();
     }
 
+    if (event.key === "ArrowLeft") {
+      showImage(currentIndex - 1);
+    }
 
-    thumbnails.forEach((thumbnail, index) => {
+    if (event.key === "ArrowRight") {
+      showImage(currentIndex + 1);
+    }
 
-        thumbnail.addEventListener("click", () => {
-
-            openLightbox(index);
-
-        });
-
-    });
-
-
-    previousButton?.addEventListener("click", () => {
-
-        showMedia(currentIndex - 1);
-
-    });
-
-
-    nextButton?.addEventListener("click", () => {
-
-        showMedia(currentIndex + 1);
-
-    });
-
-
-    closeButton?.addEventListener("click", () => {
-
-        closeLightbox();
-
-    });
-
-
-    lightbox?.addEventListener("click", event => {
-
-        if (event.target === lightbox) {
-
-            closeLightbox();
-
-        }
-
-    });
-
-
-    document.addEventListener("keydown", event => {
-
-        if (!lightbox?.classList.contains("open")) {
-            return;
-        }
-
-        if (event.key === "Escape") {
-            closeLightbox();
-        }
-
-        if (event.key === "ArrowLeft") {
-            showMedia(currentIndex - 1);
-        }
-
-        if (event.key === "ArrowRight") {
-            showMedia(currentIndex + 1);
-        }
-
-    });
+  });
 
 });

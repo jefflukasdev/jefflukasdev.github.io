@@ -754,6 +754,14 @@ textarea {
     box-shadow: 0 30px 100px rgba(0, 0, 0, 0.65);
 }
 
+.lightbox__video[hidden] {
+    display: none;
+}
+
+.lightbox__image[hidden] {
+    display: none;
+}
+
 /* ============================================
    CONTACT
 ============================================ */
